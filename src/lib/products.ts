@@ -13,6 +13,10 @@ export type Product = {
     ecoPhrases?: string[];
     patterns?: string[];
   };
+  cta?: {
+    label: string;
+    link: string;
+  };
 };
 
 export const products: Product[] = [
@@ -66,5 +70,5 @@ export const products: Product[] = [
       colors: ["verde", "terracota", "gris"],
       patterns: ["hojas", "ondas", "geométrico"],
     },
-  },
+  }
 ];
