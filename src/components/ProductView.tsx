@@ -139,7 +139,7 @@ export default function ProductView({ product }: { product: Product }) {
                     customName,
                   });
                   setShowModal(false);
-                  setToastMsg(`¡Gracias por mostrar tu interés en ${product.name} personalizado!`);
+                  setToastMsg(`¡Gracias por mostrar tu interés en ${product.name}!`);
                   setShowToast(true);
                   setTimeout(() => setShowToast(false), 6000);
                 }}
