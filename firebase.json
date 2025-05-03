@@ -4,10 +4,6 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "frameworksBackend": {
       "region": "us-central1"
-    },
-    "rewrites": [
-      { "source": "/_next/**", "function": "ssrfunction" },
-      { "source": "/**", "function": "ssrfunction" }
-    ]
+    }
   }
 }
