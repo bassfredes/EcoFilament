@@ -1,20 +1,25 @@
 import Image from "next/image";
-import { FaLeaf, FaPalette, FaCheckCircle } from 'react-icons/fa';
+import { FaLeaf, FaPalette, FaCheckCircle } from "react-icons/fa";
 import { products } from "@/lib/products";
 import Link from "next/link";
 import ProyectoUnico from "@/components/ProyectoUnico";
 
 export default function Home() {
   // Mezcla productos alternando personalizables y estándar
-  const personalizables = products.filter(p => p.customizable);
-  const estandar = products.filter(p => !p.customizable);
+  const personalizables = products.filter((p) => p.customizable);
+  const estandar = products.filter((p) => !p.customizable);
   // Alternar: [personalizable, estándar, personalizable, estándar]
-  const mixed = [personalizables[0], estandar[0], personalizables[1], estandar[1]].filter(Boolean);
+  const mixed = [
+    personalizables[0],
+    estandar[0],
+    personalizables[1],
+    estandar[1],
+  ].filter(Boolean);
 
   return (
     <main className="pt-20 bg-gradient-to-b from-[#181D22] via-[#232B33] to-[#181D22] min-h-screen">
       {/* Hero Section */}
-      <section className="w-full flex flex-col items-center justify-center text-center px-0 pb-2 bg-transparent">
+      <section className="w-full flex flex-col items-center justify-center text-center px-0 py-6 bg-transparent">
         <div className="w-full flex justify-center mb-8">
           <Image
             src="/BannerPrincipal.jpeg"
@@ -25,14 +30,16 @@ export default function Home() {
             priority
           />
         </div>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-[#6FCF97] mb-4 drop-shadow-lg tracking-tight">
-          Filamentos sustentables,{" "}
-          <span className="text-white">personalizados</span> para ti
-        </h1>
-        <p className="text-lg md:text-xl text-[#6FCF97] mb-8 font-medium">
-          Descubre cómo puedes crear productos únicos y ecológicos con nuestros
-          filamentos reciclados y personalizables.
-        </p>
+        <div className="max-w-3xl w-full mx-auto">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[#6FCF97] mb-4 drop-shadow-lg tracking-tight leading-tight">
+            Filamentos sustentables,
+            <span className="text-white"> personalizados</span> para ti
+          </h1>
+          <p className="text-lg md:text-xl text-[#6FCF97] mb-8 font-medium">
+            Descubre cómo puedes crear productos únicos y ecológicos con
+            nuestros filamentos reciclados y personalizables.
+          </p>
+        </div>
         <a
           href="#galeria"
           className="inline-block bg-[#6FCF97] text-[#181D22] px-8 py-3 rounded-full font-bold shadow-lg hover:bg-[#219150] hover:text-white transition border-2 border-[#219150] text-lg tracking-wide"
@@ -84,9 +91,7 @@ export default function Home() {
               key={product.id}
               className="bg-[#232B33] rounded-xl shadow-lg border border-[#6FCF97]/30 flex flex-col items-center p-6 h-full min-h-[540px] justify-between hover:scale-105 transition-transform"
             >
-              <Link
-                href={`/producto/${product.id}`}
-              >
+              <Link href={`/producto/${product.id}`}>
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -118,6 +123,56 @@ export default function Home() {
       </section>
       {/* Sección especial: Proyecto único */}
       <ProyectoUnico />
+      {/* Sección: ¿Quiénes somos? */}
+      <section className="w-full max-w-6xl mx-auto py-12 px-4 flex flex-col md:flex-row-reverse items-center text-center md:text-left gap-12">
+        <div className="flex-1 flex justify-center mb-6 md:mb-0">
+          <Image
+            src="/section-2.png"
+            alt="Equipo EcoFilament"
+            width={420}
+            height={420}
+            className="rounded-xl shadow-xl border-2 border-[#6FCF97]/60 bg-white object-contain"
+          />
+        </div>
+        <div className="flex-1 flex flex-col items-center md:items-start">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#6FCF97] mb-2">
+            ¿Quiénes somos?
+          </h2>
+          <p className="text-white text-lg max-w-2xl">
+            Somos un equipo joven y apasionado por el diseño, la tecnología y el
+            reciclaje. Creemos que la personalización y la sustentabilidad
+            pueden ir de la mano para crear productos que inspiren a una nueva
+            generación de makers y consumidores conscientes.
+          </p>
+          <p className="text-[#6FCF97] font-semibold mb-6">
+            ¡Únete a la revolución del filamento reciclado!
+          </p>
+        </div>
+      </section>
+      {/* Sección: ¿Por qué personalizar con reciclado? */}
+      <section className="w-full max-w-6xl mx-auto py-16 px-4 flex flex-col md:flex-row items-center text-center md:text-left gap-12">
+        <div className="flex-1 flex justify-center mb-6 md:mb-0">
+          <Image
+            src="/section-1.png"
+            alt="Reciclaje"
+            width={420}
+            height={420}
+            className="rounded-xl shadow-xl border-2 border-[#6FCF97]/60 bg-white object-contain"
+          />
+        </div>
+        <div className="flex-1 flex flex-col items-center md:items-start">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#6FCF97] mb-2">
+            ¿Por qué personalizar con reciclado?
+          </h2>
+          <p className="text-white text-lg max-w-2xl">
+            Eligiendo productos personalizados hechos con filamento reciclado
+            reduces tu huella de carbono en un 70% comparado con productos
+            convencionales. Además, apoyas la economía circular, fomentas la
+            creatividad y llevas contigo un diseño único que refleja tu
+            compromiso con el planeta.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
