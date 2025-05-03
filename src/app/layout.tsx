@@ -4,6 +4,7 @@ import Script from "next/script";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./globals.css";
+import { app } from "@/lib/firebase";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,19 +30,19 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Google Analytics (Firebase) */}
-        {process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID && (
+        {app.options.measurementId && (
           <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=${app.options.measurementId}`}
             strategy="afterInteractive"
           />
         )}
-        {process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID && (
+        {app.options.measurementId && (
           <Script id="firebase-gtag-init" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}');
+              gtag('config', '${app.options.measurementId}');
             `}
           </Script>
         )}
