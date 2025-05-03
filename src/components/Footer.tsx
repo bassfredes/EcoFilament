@@ -10,6 +10,7 @@ export default function Footer() {
             alt="EcoFilament logo"
             width={200}
             height={58}
+            loading="lazy"
           />
         </div>
         <div className="text-white text-sm text-center">

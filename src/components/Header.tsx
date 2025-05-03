@@ -37,6 +37,8 @@ const Header: React.FC = () => {
               width={200}
               height={58}
               priority
+              fetchPriority='high'
+              loading='eager'
             />
           </Link>
           <nav>
