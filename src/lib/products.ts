@@ -26,7 +26,7 @@ export const products: Product[] = [
     name: "Soporte modular para celular y tablet",
     description:
       "Fabricado 100% con filamento reciclado. Diseño ergonómico y compacto, adaptable a celulares y tablets de hasta 12 pulgadas. Color: gris reciclado con vetas naturales. Hecho de 2 botellas plásticas recicladas.",
-    image: "/soporte-celular-tablet.png",
+    image: "/soporte-celular-tablet.jpg",
     customizable: false,
     price: "$6.990",
     tags: ["estándar", "reciclado"],
@@ -36,7 +36,7 @@ export const products: Product[] = [
     name: "Set de organizadores hexagonales apilables",
     description:
       "Conjunto de 3 organizadores impresos en 3D, ideales para oficina o hogar. Filamento reciclado negro o verde oscuro. Apilables, unión por imanes. Grabado: 'hecho con plástico reciclado'.",
-    image: "/organizadores-hexagonales.png",
+    image: "/organizadores-hexagonales.jpg",
     customizable: false,
     price: "$9.990",
     tags: ["estándar", "reciclado"],
@@ -47,7 +47,7 @@ export const products: Product[] = [
     name: "Llavero personalizado",
     description:
       "Personaliza con nombre o iniciales (máx. 10 caracteres). Formas: corazón, hexágono, círculo, estrella. Colores: negro, verde musgo, gris claro. Opción de frase ecológica en reverso.",
-    image: "/llavero-personalizado.png",
+    image: "/llavero-personalizado.jpg",
     customizable: true,
     price: "$3.990",
     tags: ["personalizable", "llavero"],
@@ -62,7 +62,7 @@ export const products: Product[] = [
     name: "Macetero auto-riego personalizado",
     description:
       "Color base: verde, terracota, gris. Patrón grabado: hojas, ondas, geométrico. Agrega nombre o frase breve (máx. 15 caracteres). Capacidad: 1 litro, sistema de reserva de agua. 100% reciclado.",
-    image: "/macetero-autoriego.png",
+    image: "/macetero-autoriego.jpg",
     customizable: true,
     price: "$12.990",
     tags: ["personalizable", "macetero"],

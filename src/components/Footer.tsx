@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
         <div className="flex gap-4 items-center">
           <a
-            href="mailto:hola@ecofilament.cl"
+            href="#"
             className="text-[#6FCF97] hover:underline text-sm"
           >
             Contacto

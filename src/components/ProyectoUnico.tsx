@@ -9,7 +9,7 @@ export default function ProyectoUnico() {
     >
       <div className="flex-1 flex justify-center">
         <Image
-          src="/proyecto-unico.png"
+          src="/proyecto-unico.jpg"
           alt="Proyecto único EcoFilament"
           width={420}
           height={420}
@@ -39,8 +39,6 @@ export default function ProyectoUnico() {
                 location: "seccion_proyecto_unico",
               });
             }
-            window.location.href =
-              "mailto:hola@ecofilament.cl?subject=Quiero%20mi%20proyecto%20único%20EcoFilament";
           }}
         >
           ¡Quiero mi proyecto único!
