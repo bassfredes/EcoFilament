@@ -5,6 +5,10 @@
     "frameworksBackend": {
       "region": "us-central1"
     },
-    "rewrites": [{ "source": "/_next/**", "function": "ssrfunction" }]
+    "rewrites": [
+      { "source": "/_next/**", "function": "ssrfunction" },
+      { "source": "/public/**", "destination": "/public/$1" },
+      { "source": "/**", "function": "ssrfunction" }
+    ]
   }
 }
