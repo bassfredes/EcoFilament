@@ -1,103 +1,53 @@
 import Image from "next/image";
+import { FaLeaf, FaPalette, FaCheckCircle } from 'react-icons/fa';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="pt-20 bg-gradient-to-b from-[#181D22] via-[#232B33] to-[#181D22] min-h-screen">
+      {/* Hero Section */}
+      <section className="w-full flex flex-col items-center justify-center text-center px-0 pb-2 bg-transparent">
+        <div className="w-full flex justify-center mb-8">
+          <Image
+            src="/BannerPrincipal.jpeg"
+            alt="EcoFilament Banner Principal"
+            width={1280}
+            height={720}
+            className="rounded-lg shadow-2xl w-full max-w-[1280px] border-4 border-[#6FCF97]"
+            priority
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-[#6FCF97] mb-4 drop-shadow-lg tracking-tight">
+          Filamentos sustentables, <span className="text-white">personalizados</span> para ti
+        </h1>
+        <p className="text-lg md:text-xl text-[#6FCF97] mb-8 font-medium">
+          Descubre cómo puedes crear productos únicos y ecológicos con nuestros filamentos reciclados y personalizables.
+        </p>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#galeria"
+          className="inline-block bg-[#6FCF97] text-[#181D22] px-8 py-3 rounded-full font-bold shadow-lg hover:bg-[#219150] hover:text-white transition border-2 border-[#219150] text-lg tracking-wide"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          Empieza a personalizar
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      {/* Beneficios */}
+      <section id="beneficios" className="w-full max-w-5xl mx-auto grid md:grid-cols-3 gap-8 py-16 px-4 bg-transparent">
+        <div className="flex flex-col items-center text-center p-6 rounded-xl bg-[#232B33] shadow-lg border border-[#6FCF97]/30">
+          <FaLeaf className="mb-4 text-[#6FCF97] w-14 h-14 drop-shadow" />
+          <h3 className="text-xl font-bold text-[#6FCF97] mb-2">Sustentable</h3>
+          <p className="text-white font-medium">Filamentos hechos a partir de materiales reciclados, reduciendo el impacto ambiental.</p>
+        </div>
+        <div className="flex flex-col items-center text-center p-6 rounded-xl bg-[#232B33] shadow-lg border border-[#6FCF97]/30">
+          <FaPalette className="mb-4 text-[#6FCF97] w-14 h-14 drop-shadow" />
+          <h3 className="text-xl font-bold text-[#6FCF97] mb-2">Personalizable</h3>
+          <p className="text-white font-medium">Elige color y agrega tu nombre o texto para un producto único.</p>
+        </div>
+        <div className="flex flex-col items-center text-center p-6 rounded-xl bg-[#232B33] shadow-lg border border-[#6FCF97]/30">
+          <FaCheckCircle className="mb-4 text-[#6FCF97] w-14 h-14 drop-shadow" />
+          <h3 className="text-xl font-bold text-[#6FCF97] mb-2">Calidad garantizada</h3>
+          <p className="text-white font-medium">Modelos probados y listos para impresión 3D, con excelente desempeño.</p>
+        </div>
+      </section>
+      {/* Aquí irán las siguientes secciones: Galería, etc. */}
+    </main>
   );
 }
