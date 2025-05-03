@@ -65,10 +65,16 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        id="main-body"
       >
+        <div id="mobile-menu-root"></div>
         <Header />
-        {children}
-        <Footer />
+        <div id="layout-shift-wrapper">
+          <main id="main-content-wrapper">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaLeaf, FaPalette, FaCheckCircle } from "react-icons/fa";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
+import ButtonScrollToGaleria from "@/components/ButtonScrollToGaleria";
 
 const LazyGaleria = dynamic(() => import("@/components/Galeria"));
 const LazyProyectoUnico = dynamic(() => import("@/components/ProyectoUnico"));
@@ -28,7 +29,7 @@ export default function Home() {
             />
           </picture>
         </div>
-        <div className="max-w-5xl w-full mx-auto">
+        <div className="max-w-[1120px] w-full px-2 sm:px-0 mx-auto">
           <h1 className="text-balance text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg tracking-tight leading-tight break-words whitespace-pre-line">
             Filamentos sustentables,{" "}
             <span className="text-[#6FCF97]">personalizados</span> para ti
@@ -38,12 +39,7 @@ export default function Home() {
             nuestros filamentos reciclados y personalizables.
           </p>
         </div>
-        <a
-          href="#galeria"
-          className="inline-block bg-[#6FCF97] text-[#181D22] px-8 py-3 rounded-full font-bold shadow-lg hover:bg-[#219150] hover:text-white transition border-2 border-[#219150] text-lg tracking-wide"
-        >
-          Empieza a personalizar
-        </a>
+        <ButtonScrollToGaleria />
       </section>
       {/* Beneficios */}
       <section
