@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { analytics } from "@/lib/firebase";
 import { logEvent } from "firebase/analytics";
+import Toast from "@/components/Toast";
 
 function trackEvent(event: string, params?: Record<string, unknown>) {
   if (analytics) {
@@ -22,6 +23,8 @@ export default function ProductView({ product }: { product: Product }) {
   const [showModal, setShowModal] = useState(false);
   const [customName, setCustomName] = useState("");
   const [color, setColor] = useState("verde");
+  const [showToast, setShowToast] = useState(false);
+  const [toastMsg, setToastMsg] = useState("");
   // Simulación de imágenes por color
   const colorImages: Record<string, string> = {
     verde: product?.image ?? "",
@@ -42,7 +45,9 @@ export default function ProductView({ product }: { product: Product }) {
 
   const handleComprar = () => {
     trackEvent("click_comprar", { id: product.id, name: product.name });
-    alert("¡Producto agregado al carrito!");
+    setToastMsg(`¡Gracias por mostrar tu interés en ${product.name}!`);
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 6000);
   };
 
   const handleVerImagen = () => {
@@ -52,6 +57,7 @@ export default function ProductView({ product }: { product: Product }) {
 
   return (
     <main className="pt-28 min-h-screen bg-gradient-to-b from-[#181D22] via-[#232B33] to-[#181D22] flex flex-col items-center px-2 sm:px-4">
+      <Toast show={showToast} message={toastMsg} onClose={() => setShowToast(false)} />
       {/* Modal de personalización */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
@@ -133,6 +139,9 @@ export default function ProductView({ product }: { product: Product }) {
                     customName,
                   });
                   setShowModal(false);
+                  setToastMsg(`¡Gracias por mostrar tu interés en ${product.name} personalizado!`);
+                  setShowToast(true);
+                  setTimeout(() => setShowToast(false), 6000);
                 }}
               >
                 Lo quiero

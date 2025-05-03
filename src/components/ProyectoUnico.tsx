@@ -1,7 +1,11 @@
 "use client";
+import React, { useState } from "react";
 import Image from "next/image";
+import Toast from "@/components/Toast";
 
 export default function ProyectoUnico() {
+  const [showToast, setShowToast] = useState(false);
+
   return (
     <section
       className="w-full max-w-6xl mx-auto py-20 px-4 flex flex-col md:flex-row items-center gap-12"
@@ -39,10 +43,13 @@ export default function ProyectoUnico() {
                 location: "seccion_proyecto_unico",
               });
             }
+            setShowToast(true);
+            setTimeout(() => setShowToast(false), 6000);
           }}
         >
           ¡Quiero mi proyecto único!
         </button>
+        <Toast show={showToast} message="¡Gracias por mostrar intención!" onClose={() => setShowToast(false)} />
       </div>
     </section>
   );
