@@ -14,8 +14,8 @@ import { Button } from "@/components/Button";
 import ReactDOM from "react-dom";
 
 const menuLinks = [
-  { href: "#beneficios", label: "Beneficios" },
-  { href: "#galeria", label: "Galería" },
+  { href: "#beneficios", label: "Benefits" },
+  { href: "#galeria", label: "Gallery" },
 ];
 
 const Header: React.FC = () => {
@@ -117,7 +117,7 @@ const Header: React.FC = () => {
           ))}
           <li className="mt-2">
             <Button
-              text="Empieza a personalizar"
+              text="Start Customizing"
               onClick={() => {
                 setMenuOpen(false);
                 scrollToSection("galeria");
@@ -168,7 +168,7 @@ const Header: React.FC = () => {
               ))}
               <li>
                 <Button
-                  text="Empieza a personalizar"
+                  text="Start Customizing"
                   onClick={() => scrollToSection("galeria")}
                   className="bg-[#6FCF97] text-[#22292F] px-4 py-2 rounded-full cursor-pointer font-semibold shadow hover:bg-[#219150] hover:text-white transition border border-[#219150] w-full block text-center whitespace-nowrap"
                 />

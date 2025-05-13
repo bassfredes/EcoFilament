@@ -14,8 +14,8 @@ export default function Galeria() {
 
   return (
     <section id="galeria" className="w-full max-w-6xl mx-auto py-8 px-4">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-[#6FCF97] mb-10 text-center drop-shadow-lg">
-        Galería de Productos
+      <h2 className="text-3xl md:text-4xl font-bold text-[#6FCF97] mb-10 text-center drop-shadow-lg">
+        Products Gallery
       </h2>
       <div className="grid gap-8 md:grid-cols-2">
         {mixed.map((product) => (
@@ -23,9 +23,7 @@ export default function Galeria() {
             key={product.id}
             className="bg-[#232B33] rounded-xl shadow-lg border border-[#6FCF97]/30 flex flex-col items-center p-6 h-full min-h-[540px] justify-between hover:scale-105 transition-transform"
           >
-            <Link
-              href={`/producto/${product.id}`}
-            >
+            <Link href={`/producto/${product.id}`}>
               <Image
                 src={product.image}
                 alt={product.name}
@@ -49,7 +47,7 @@ export default function Galeria() {
                 href={`/producto/${product.id}`}
                 className="bg-[#6FCF97] text-[#22292F] px-6 py-2 rounded-full font-semibold shadow hover:bg-[#219150] hover:text-white transition border border-[#219150] w-full text-center"
               >
-                Ver producto
+                View Product
               </Link>
             </div>
           </div>

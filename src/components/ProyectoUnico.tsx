@@ -22,18 +22,17 @@ export default function ProyectoUnico() {
         />
       </div>
       <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
-        <h2 className="text-2xl md:text-3xl font-extrabold text-[#6FCF97] mb-4 uppercase tracking-widest">
-          ¿Tienes una idea imposible?
+        <h2 className="text-2xl md:text-3xl font-bold text-[#6FCF97] mb-4 uppercase tracking-widest">
+          Got a bold idea?
         </h2>
         <p className="text-white text-lg mb-4">
-          En EcoFilament, no hay límites para tu creatividad. Si puedes
-          imaginarlo, podemos crearlo: prototipos, objetos únicos, regalos
-          personalizados y más, todo hecho con impresión 3D y filamento
-          reciclado.
+          At EcoFilament, your creativity has no limits. If you can imagine it,
+          we can make it: prototypes, unique objects, custom gifts, and
+          more—all crafted with 3D printing and recycled filament.
         </p>
         <p className="text-[#6FCF97] font-semibold mb-6">
-          Atrévete a llevar tu proyecto al siguiente nivel y sorprende al mundo
-          con algo realmente increíble y sostenible.
+          Take your project to the next level and wow the world with something
+          truly amazing and sustainable.
         </p>
         <button
           className="bg-[#6FCF97] text-[#22292F] px-8 py-3 rounded-full font-bold shadow hover:bg-[#219150] hover:text-white transition border-2 border-[#219150] text-lg tracking-wide cursor-pointer mt-2"
@@ -47,9 +46,13 @@ export default function ProyectoUnico() {
             setTimeout(() => setShowToast(false), 6000);
           }}
         >
-          ¡Quiero mi proyecto único!
+          I want my unique project!
         </button>
-        <Toast show={showToast} message="¡Gracias por mostrar intención!" onClose={() => setShowToast(false)} />
+        <Toast
+          show={showToast}
+          message="Thank you for your interest!"
+          onClose={() => setShowToast(false)}
+        />
       </div>
     </section>
   );

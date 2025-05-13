@@ -20,55 +20,55 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  // Estándar
+  // Standard
   {
     id: "soporte-celular-tablet",
-    name: "Soporte modular para celular y tablet",
+    name: "Modular Stand for Phone & Tablet",
     description:
-      "Fabricado 100% con filamento reciclado. Diseño ergonómico y compacto, adaptable a celulares y tablets de hasta 12 pulgadas. Color: gris reciclado con vetas naturales. Hecho de 2 botellas plásticas recicladas.",
+      "Made 100% from recycled filament. Ergonomic and compact design, fits phones and tablets up to 12 inches. Color: recycled gray with natural streaks. Made from 2 recycled plastic bottles.",
     image: "/soporte-celular-tablet.jpg",
     customizable: false,
     price: "$6.990",
-    tags: ["estándar", "reciclado"],
+    tags: ["standard", "recycled"],
   },
   {
     id: "organizadores-hexagonales",
-    name: "Set de organizadores hexagonales apilables",
+    name: "Stackable Hexagonal Organizers Set",
     description:
-      "Conjunto de 3 organizadores impresos en 3D, ideales para oficina o hogar. Filamento reciclado negro o verde oscuro. Apilables, unión por imanes. Grabado: 'hecho con plástico reciclado'.",
+      "Set of 3 organizers 3D printed, perfect for office or home. Recycled black or dark green filament. Stackable, magnetic connection. Engraved: 'made with recycled plastic'.",
     image: "/organizadores-hexagonales.jpg",
     customizable: false,
     price: "$9.990",
-    tags: ["estándar", "reciclado"],
+    tags: ["standard", "recycled"],
   },
-  // Personalizables
+  // Customizable
   {
     id: "llavero-personalizado",
-    name: "Llavero personalizado",
+    name: "Custom Keychain",
     description:
-      "Personaliza con nombre o iniciales (máx. 10 caracteres). Formas: corazón, hexágono, círculo, estrella. Colores: negro, verde musgo, gris claro. Opción de frase ecológica en reverso.",
+      "Add your name or initials (max. 10 characters). Shapes: heart, hexagon, circle, star. Colors: black, moss green, light gray. Option for eco phrase on the back.",
     image: "/llavero-personalizado.jpg",
     customizable: true,
     price: "$3.990",
-    tags: ["personalizable", "llavero"],
+    tags: ["customizable", "keychain"],
     variants: {
-      shapes: ["corazón", "hexágono", "círculo", "estrella"],
-      colors: ["negro", "verde musgo", "gris claro"],
-      ecoPhrases: ["Yo reciclo", "Circular Life"],
+      shapes: ["heart", "hexagon", "circle", "star"],
+      colors: ["black", "moss green", "light gray"],
+      ecoPhrases: ["I recycle", "Circular Life"],
     },
   },
   {
     id: "macetero-autoriego",
-    name: "Macetero auto-riego personalizado",
+    name: "Self-Watering Planter",
     description:
-      "Color base: verde, terracota, gris. Patrón grabado: hojas, ondas, geométrico. Agrega nombre o frase breve (máx. 15 caracteres). Capacidad: 1 litro, sistema de reserva de agua. 100% reciclado.",
+      "Base colors: green, terracotta, gray. Engraved pattern: leaves, waves, geometric. Add a name or short phrase (max. 15 characters). Capacity: 1 liter, water reservoir system. 100% recycled.",
     image: "/macetero-autoriego.jpg",
     customizable: true,
     price: "$12.990",
-    tags: ["personalizable", "macetero"],
+    tags: ["customizable", "planter"],
     variants: {
-      colors: ["verde", "terracota", "gris"],
-      patterns: ["hojas", "ondas", "geométrico"],
+      colors: ["green", "terracotta", "gray"],
+      patterns: ["leaves", "waves", "geometric"],
     },
   }
 ];

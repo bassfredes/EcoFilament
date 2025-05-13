@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./globals.css";
 import { app } from "@/lib/firebase";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap"
 });
 
 const geistMono = Geist_Mono({
@@ -29,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics (Firebase) */}
         {app.options.measurementId && (
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${app.options.measurementId}`}
@@ -64,15 +64,13 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} ${geistMono.variable} antialiased`}
         id="main-body"
       >
         <div id="mobile-menu-root"></div>
         <Header />
         <div id="layout-shift-wrapper">
-          <main id="main-content-wrapper">
-            {children}
-          </main>
+          <main id="main-content-wrapper">{children}</main>
           <Footer />
         </div>
       </body>

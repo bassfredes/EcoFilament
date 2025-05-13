@@ -5,6 +5,6 @@ import React from "react";
 export default function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = React.use(params);
   const product = products.find((p) => p.id === id);
-  if (!product) return <div>Producto no encontrado</div>;
+  if (!product) return <div>Product not found</div>;
   return <ProductView product={product} />;
 }

@@ -45,7 +45,7 @@ export default function ProductView({ product }: { product: Product }) {
 
   const handleComprar = () => {
     trackEvent("click_comprar", { id: product.id, name: product.name });
-    setToastMsg(`¡Gracias por mostrar tu interés en ${product.name}!`);
+    setToastMsg(`Thank you for your interest in ${product.name}!`);
     setShowToast(true);
     setTimeout(() => setShowToast(false), 6000);
   };
@@ -69,8 +69,8 @@ export default function ProductView({ product }: { product: Product }) {
             >
               ×
             </button>
-            <h2 className="text-2xl font-extrabold text-[#6FCF97] mb-4 text-center tracking-wide">
-              Personaliza tu {product.name}
+            <h2 className="text-2xl font-bold text-[#6FCF97] mb-4 text-center tracking-wide">
+              Personalize your {product.name}
             </h2>
             <div className="flex flex-col items-center gap-4 w-full">
               <div className="bg-[#181D22] rounded-xl p-4 border-2 border-[#6FCF97]/30 shadow mb-2 flex items-center justify-center">
@@ -83,14 +83,14 @@ export default function ProductView({ product }: { product: Product }) {
                 />
               </div>
               <label className="w-full text-white font-semibold text-left">
-                Tu nombre o texto
+                Your name or text
                 <input
                   type="text"
                   className="mt-1 w-full rounded px-3 py-2 bg-[#181D22] border border-[#6FCF97]/40 text-white focus:outline-none focus:border-[#6FCF97]"
                   maxLength={20}
                   value={customName}
                   onChange={(e) => setCustomName(e.target.value)}
-                  placeholder="Ej: Camila, Para mamá, etc."
+                  placeholder="e.g. Camila, For Mom, etc."
                 />
               </label>
               <div className="w-full">
@@ -104,7 +104,7 @@ export default function ProductView({ product }: { product: Product }) {
                     }`}
                     style={{ background: "#6FCF97" }}
                     onClick={() => setColor("verde")}
-                    aria-label="Verde"
+                    aria-label="Green"
                   />
                   <button
                     className={`w-8 h-8 rounded-full border-2 transition-all duration-200 ${
@@ -114,7 +114,7 @@ export default function ProductView({ product }: { product: Product }) {
                     }`}
                     style={{ background: "#2D9CDB" }}
                     onClick={() => setColor("azul")}
-                    aria-label="Azul"
+                    aria-label="Blue"
                   />
                   <button
                     className={`w-8 h-8 rounded-full border-2 transition-all duration-200 ${
@@ -124,7 +124,7 @@ export default function ProductView({ product }: { product: Product }) {
                     }`}
                     style={{ background: "#EB5757" }}
                     onClick={() => setColor("rojo")}
-                    aria-label="Rojo"
+                    aria-label="Red"
                   />
                 </div>
               </div>
@@ -134,17 +134,17 @@ export default function ProductView({ product }: { product: Product }) {
                   trackEvent("intent_click", {
                     id: product.id,
                     name: product.name,
-                    personalized: true,
+                    custom: true,
                     color,
                     customName,
                   });
                   setShowModal(false);
-                  setToastMsg(`¡Gracias por mostrar tu interés en ${product.name}!`);
+                  setToastMsg(`Thank you for your interest in ${product.name}!`);
                   setShowToast(true);
                   setTimeout(() => setShowToast(false), 6000);
                 }}
               >
-                Lo quiero
+                I want it
               </button>
             </div>
           </div>
@@ -167,16 +167,16 @@ export default function ProductView({ product }: { product: Product }) {
             className="text-[#6FCF97] underline text-sm mt-2 hover:text-white transition"
             onClick={handleVerImagen}
           >
-            Ver imagen en grande
+            View larger image
           </button>
         </div>
         <div className="flex-1 flex flex-col items-center md:items-start w-full">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-[#6FCF97] mb-2 text-center md:text-left drop-shadow-lg">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#6FCF97] mb-2 text-center md:text-left drop-shadow-lg">
             {product.name}
           </h1>
           {product.customizable && (
             <span className="inline-block bg-[#6FCF97]/20 text-[#6FCF97] font-semibold text-xs px-3 py-1 rounded-full mb-2 uppercase tracking-widest">
-              Personalizable
+              Customizable
             </span>
           )}
           <p className="text-white mb-6 text-lg text-center md:text-left">
@@ -201,7 +201,7 @@ export default function ProductView({ product }: { product: Product }) {
                     d="M15.232 5.232l3.536 3.536M9 13l6.586-6.586a2 2 0 112.828 2.828L11.828 15.828a4 4 0 01-1.414.94l-4.243 1.415 1.415-4.243a4 4 0 01.94-1.414z"
                   />
                 </svg>
-                Personalizar producto
+                Personalize Product
               </button>
             ) : (
               <button
@@ -221,7 +221,7 @@ export default function ProductView({ product }: { product: Product }) {
                     d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.35 2.7A2 2 0 007.48 19h9.04a2 2 0 001.83-1.3L21 13M7 13V6a1 1 0 011-1h5m-6 8h.01"
                   />
                 </svg>
-                Comprar ahora
+                Buy Now
               </button>
             )}
           </div>

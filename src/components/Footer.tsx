@@ -14,17 +14,16 @@ export default function Footer() {
           />
         </div>
         <div className="text-white text-sm text-center">
-          © {new Date().getFullYear()} EcoFilament. Todos los derechos
-          reservados.
+          © {new Date().getFullYear()} EcoFilament. All rights reserved.
           <br />
-          Hecho con ♻️ y pasión en Chile.
+          Made with ♻️ and passion from Chile.
         </div>
         <div className="flex gap-4 items-center">
           <a
             href="#"
             className="text-[#6FCF97] hover:underline text-sm"
           >
-            Contacto
+            Contact
           </a>
           <a
             href="https://www.instagram.com/"

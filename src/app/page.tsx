@@ -30,13 +30,13 @@ export default function Home() {
           </picture>
         </div>
         <div className="max-w-[1120px] w-full px-2 sm:px-0 mx-auto">
-          <h1 className="text-balance text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg tracking-tight leading-tight break-words whitespace-pre-line">
-            Filamentos sustentables,{" "}
-            <span className="text-[#6FCF97]">personalizados</span> para ti
+          <h1 className="text-balance text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg tracking-tight leading-tight break-words whitespace-pre-line">
+            Sustainable Filaments,{" "}
+            <span className="text-[#6FCF97]">custom-made</span> for you
           </h1>
           <p className="text-lg md:text-xl text-white mb-8 font-medium">
-            Descubre cómo puedes crear productos únicos y ecológicos con
-            nuestros filamentos reciclados y personalizables.
+            Discover how you can create unique and eco-friendly products with
+            our recycled and customizable filaments.
           </p>
         </div>
         <ButtonScrollToGaleria />
@@ -48,29 +48,31 @@ export default function Home() {
       >
         <div className="flex flex-col items-center text-center p-6 rounded-xl bg-[#232B33] shadow-lg border border-[#6FCF97]/30">
           <FaLeaf className="mb-4 text-[#6FCF97] w-14 h-14 drop-shadow" />
-          <h3 className="text-xl font-bold text-[#6FCF97] mb-2">Sustentable</h3>
+          <h3 className="text-xl font-bold text-[#6FCF97] mb-2">
+            Eco-Friendly
+          </h3>
           <p className="text-white font-medium">
-            Filamentos hechos a partir de materiales reciclados, reduciendo el
-            impacto ambiental.
+            Filaments made from recycled materials, reducing environmental
+            impact.
           </p>
         </div>
         <div className="flex flex-col items-center text-center p-6 rounded-xl bg-[#232B33] shadow-lg border border-[#6FCF97]/30">
           <FaPalette className="mb-4 text-[#6FCF97] w-14 h-14 drop-shadow" />
           <h3 className="text-xl font-bold text-[#6FCF97] mb-2">
-            Personalizable
+            Customizable
           </h3>
           <p className="text-white font-medium">
-            Elige color y agrega tu nombre o texto para un producto único.
+            Choose your color and add your name or text for a truly unique
+            product.
           </p>
         </div>
         <div className="flex flex-col items-center text-center p-6 rounded-xl bg-[#232B33] shadow-lg border border-[#6FCF97]/30">
           <FaCheckCircle className="mb-4 text-[#6FCF97] w-14 h-14 drop-shadow" />
           <h3 className="text-xl font-bold text-[#6FCF97] mb-2">
-            Calidad garantizada
+            Quality Guaranteed
           </h3>
           <p className="text-white font-medium">
-            Modelos probados y listos para impresión 3D, con excelente
-            desempeño.
+            Tested models, ready for 3D printing, with excellent performance.
           </p>
         </div>
       </section>
@@ -78,7 +80,7 @@ export default function Home() {
       <Suspense
         fallback={
           <div className="text-center text-[#6FCF97] py-12">
-            Cargando galería...
+            Loading products gallery...
           </div>
         }
       >
@@ -88,7 +90,7 @@ export default function Home() {
       <Suspense
         fallback={
           <div className="text-center text-[#6FCF97] py-12">
-            Cargando proyecto único...
+            Loading unique project...
           </div>
         }
       >
@@ -99,7 +101,7 @@ export default function Home() {
         <div className="flex-1 flex justify-center mb-6 md:mb-0">
           <Image
             src="/section-2.jpg"
-            alt="Equipo EcoFilament"
+            alt="EcoFilament Team"
             width={420}
             height={420}
             className="rounded-xl shadow-xl border-2 border-[#6FCF97]/60 bg-white object-contain"
@@ -107,17 +109,17 @@ export default function Home() {
           />
         </div>
         <div className="flex-1 flex flex-col items-center md:items-start">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[#6FCF97] mb-2">
-            ¿Quiénes somos?
+          <h2 className="text-2xl md:text-3xl font-bold text-[#6FCF97] mb-2">
+            Who are we?
           </h2>
           <p className="text-white text-lg max-w-2xl">
-            Somos un equipo joven y apasionado por el diseño, la tecnología y el
-            reciclaje. Creemos que la personalización y la sustentabilidad
-            pueden ir de la mano para crear productos que inspiren a una nueva
-            generación de makers y consumidores conscientes.
+            We are a young team passionate about design, technology, and
+            recycling. We believe that personalization and sustainability can go
+            hand in hand to create products that inspire a new generation of
+            makers and conscious consumers.
           </p>
           <p className="text-[#6FCF97] font-semibold mb-6">
-            ¡Únete a la revolución del filamento reciclado!
+            Join the recycled filament revolution!
           </p>
         </div>
       </section>
@@ -126,7 +128,7 @@ export default function Home() {
         <div className="flex-1 flex justify-center mb-6 md:mb-0">
           <Image
             src="/section-1.jpg"
-            alt="Reciclaje"
+            alt="Recycling"
             width={420}
             height={420}
             className="rounded-xl shadow-xl border-2 border-[#6FCF97]/60 bg-white object-contain"
@@ -134,15 +136,15 @@ export default function Home() {
           />
         </div>
         <div className="flex-1 flex flex-col items-center md:items-start">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[#6FCF97] mb-2">
-            ¿Por qué personalizar con reciclado?
+          <h2 className="text-2xl md:text-3xl font-bold text-[#6FCF97] mb-2">
+            Why choose recycled customization?
           </h2>
           <p className="text-white text-lg max-w-2xl">
-            Eligiendo productos personalizados hechos con filamento reciclado
-            reduces tu huella de carbono en un 70% comparado con productos
-            convencionales. Además, apoyas la economía circular, fomentas la
-            creatividad y llevas contigo un diseño único que refleja tu
-            compromiso con el planeta.
+            By choosing custom products made with recycled filament, you
+            reduce your carbon footprint by up to 70% compared to conventional
+            products. You also support the circular economy, foster creativity,
+            and carry a unique design that reflects your commitment to the
+            planet.
           </p>
         </div>
       </section>
